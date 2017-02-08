@@ -1,0 +1,1 @@
+<p>This page is located at <code>views/index/message.volt</code></p>

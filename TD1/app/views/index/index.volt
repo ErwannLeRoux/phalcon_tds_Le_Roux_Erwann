@@ -1,12 +1,12 @@
 <div class="page-header">
-    <h1>Congratulations!</h1>
+    <h1>Bienvenue sur le site user-management !!</h1>
 </div>
 
-<p>You're now flying with Phalcon. Great things are about to happen!</p>
+{{ linkTo("users","<h2>Débuter la gestion des Utilisateurs en cliquant ici..</h2>") }}
 
-<p>This page is located at <code>views/index/index.volt</code></p>
 
-<h1>Hello world !</h1>
 
-{{linkTo("inscription","Inscrivez-vous...")}}
+
+
+
 
