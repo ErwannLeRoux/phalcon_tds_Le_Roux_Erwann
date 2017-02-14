@@ -12,6 +12,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
         <?= $this->assets->outputCss() ?>
+        <?= $this->assets->outputJs() ?>
     </head>
     <body>
         <div class="container">

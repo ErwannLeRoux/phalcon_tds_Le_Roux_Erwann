@@ -1,5 +1,5 @@
 <div class="ui menu">
-    {{ link_to("users/index", '<i class="sign in icon"></i> Retour à la liste', "class": "item") }}
+    <?= $this->tag->linkTo(['users/index', '<i class="sign in icon"></i> Retour à la liste', 'class' => 'item']) ?>
 </div>
 
 <div class="ui icon message">
@@ -8,7 +8,7 @@
         <div class="header">
             Message
         </div>
-        <p>{{ texte }}</p>
+        <p><?= $texte ?></p>
     </div>
 </div>
 
@@ -40,9 +40,9 @@
     <div class="field">
         <label>Role</label>
         <select class="ui dropdown">
-            {% for role in roles %}
-                <option value="">{{ role.getName() }}</option>
-            {% endfor %}
+            <?php foreach ($roles as $role) { ?>
+                <option value=""><?= $role->getName() ?></option>
+            <?php } ?>
         </select>
     </div>
 

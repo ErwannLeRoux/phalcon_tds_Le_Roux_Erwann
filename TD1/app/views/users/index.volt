@@ -1,23 +1,29 @@
 <h3>Liste des utilisateurs</h3>
-<div id="newUser">
-    <button class="ui basic button" onclick="">
-        <i class="add user icon"></i>
-        Nouvel Utilisateur...
-    </button>
-</div>
 
+<div id="newUser">
+    {{ link_to("users/form", '<i class="add user icon"></i>Nouvel Utilisateur...', "class": "ui basic button") }}
+</div>
 <div id = "container-list">
     <table class="ui selectable table">
-        <th>{{ check_field("selectAll") }}</th>
+        <th>
+            <div class="ui checkbox">
+                <input id="tout" type="checkbox">
+                <label for="tout"></label>
+            </div>
+        </th>
         <th>Prénom</th>
         <th>Nom</th>
         <th>Login</th>
         <th>Email</th>
         <th>Role</th>
         {% for user in users %}
-
             <tr>
-                <td>{{ check_field("select") }}</td>
+                <td>
+                    <div name = "check" class="ui checkbox">
+                        <input class = "autreCheck" name = "example" id="example_{{ user.getId() }}" type="checkbox" onchange="checkAllBoxes(this)">
+                        <label for="example_{{ user.getId() }}"></label>
+                    </div>
+                </td>
                 <td>
                     {{ user.getFirstname() }}
                 </td>
