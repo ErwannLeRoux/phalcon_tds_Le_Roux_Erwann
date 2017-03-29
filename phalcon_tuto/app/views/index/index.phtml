@@ -1,0 +1,11 @@
+<?php
+echo "<h1>Hello world !</h1>";
+echo Phalcon\Tag::linkTo("inscription","Inscrivez-vous...");
+
+
+$user = new Users();
+
+//Enregistrement et vérification des erreurs
+$success = $user->find();
+
+var_dump($success);
